@@ -88,11 +88,15 @@ connectDB();
 // ======================
 // 🌐 CORS
 // ======================
+
+// const allowedOrigins = [
+//   "http://localhost:3000",
+//   "https://vineet-photography-frontend.vercel.app"
+// ];
 const allowedOrigins = [
   "http://localhost:3000",
   process.env.FRONTEND_URL
 ];
-
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
